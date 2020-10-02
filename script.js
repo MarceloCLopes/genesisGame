@@ -56,9 +56,10 @@ let click = (color) => {
 
   setTimeout(() => {
     createColorElement(color).classList.remove('selected');
-  })
+    checkOrder();
+  }, 250)
 
-  checkOrder();
+
 }
 
 //Função que retorna a cor
@@ -100,3 +101,12 @@ let playGame = () => {
 
   nextLevel();
 }
+
+//Eventos de clique para as cores
+green.onclick = () => click(0);
+red.onclick = () => click(1);
+yellow.onclick = () => click(2);
+blue.onclick = () => click(3);
+
+//Início do jogo
+playGame();
