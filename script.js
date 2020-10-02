@@ -92,3 +92,11 @@ let gameOver = () => {
 
   playGame();
 }
+
+//Inicio do jogo
+let playGame = () => {
+  alert("Bem vindo ao Gênesis! Iniciando novo jogo!");
+  score = 0;
+
+  nextLevel();
+}
