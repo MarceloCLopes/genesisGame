@@ -32,3 +32,16 @@ let lightColor = (element, number) => {
     element.classList.remove('selected');
   });
 }
+
+let checkOrder = () => {
+  for (let i in clickedOrder) {
+    if (clickedOrder[i] != order[i]) {
+      lose();
+      break;
+    }
+  }
+  if (clickedOrder.length == order.length) {
+    alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível`);
+    nextLevel();
+  }
+}
