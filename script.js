@@ -60,3 +60,4 @@ let click = (color) => {
 
   checkOrder();
 }
+
