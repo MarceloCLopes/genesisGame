@@ -39,7 +39,7 @@ let lightColor = (element, number) => {
 let checkOrder = () => {
   for (let i in clickedOrder) {
     if (clickedOrder[i] != order[i]) {
-      lose();
+      gameOver();
       break;
     }
   }
@@ -82,4 +82,13 @@ let createColorElement = (color) => {
 let nextLevel = () => {
   score++;
   shuffleOrder();
+}
+
+//Função para game over
+let gameOver = () => {
+  alert(`Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um jogo`);
+  order = [];
+  clickedOrder = [];
+
+  playGame();
 }
