@@ -77,3 +77,9 @@ let createColorElement = (color) => {
     return blue;
   }
 }
+
+//Função para o próximo nível do jogo
+let nextLevel = () => {
+  score++;
+  shuffleOrder();
+}
